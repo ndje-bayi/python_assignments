@@ -16,10 +16,7 @@ def main():
     seconds = input("Enter the number of seconds: >>> ")
     if seconds.isdecimal():
         result = break_down(seconds)
-        print("""The number of years is: {}\nThe number of months is: {}\nThe number of weeks is: {}\
-            \nThe number of days is: {}\nThe number of hours is: {}\nThe number of minutes is: {}\
-            \nThe number of seconds is: {}""".format(result[0],
-            result[1], result[2], result[3], result[4], result[5], result[6]))
+        print(seconds + " is {} years, {} months, {} weeks, {} days, {} hours, {} minutes, and {} seconds".format(*result))
         
     else:
         print(seconds, "is an invalid input")
