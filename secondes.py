@@ -11,17 +11,14 @@ SECONDS_IN_DAY = 86400
 SECONDS_IN_HOUR = 3600
 SECONDS_IN_MINUTE = 60
 
-
 def main():
     seconds = input("Enter the number of seconds: >>> ")
     if seconds.isdecimal():
         result = break_down(seconds)
-        print(seconds + " is {} years, {} months, {} weeks, {} days, {} hours, {} minutes, and {} seconds".format(*result))
-        
+        print(seconds + " is {} years, {} months, {} weeks, {} days, {} hours, {} minutes, and {} seconds".format(*result))   
     else:
         print(seconds, "is an invalid input")
         
-
 def break_down(seconds):
     seconds = int(seconds)
     years = int(seconds / SECONDS_IN_YEAR)
